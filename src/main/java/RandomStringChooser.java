@@ -18,7 +18,7 @@ public class RandomStringChooser
   //}
   public String getNext(){
 if(array.size()>=0){
-return array.remove(Math.random()*array.size());
+return array.remove((int)Math.random()*array.size());
 }else{
 return "NONE";
   
