@@ -2,26 +2,22 @@ import java.util.*;
 public class RandomStringChooser
 {
   private ArrayList<String> array;
-  //private String x;
-  //private int randomnum;
 
   public RandomStringChooser(String [] wordarray){
     array = new ArrayList<String>();
-    for(int i = wordarray.length-1;i>=0;i--){
+    for(int i = 0; i < wordarray.length; i ++){
        array.add(wordarray[i]);
     }
-    //randomnum=0;
-    //x="";
+    
   }
   //public int RandomNumber(){
   //randomnum=Math.random()*array.size();
   //}
   public String getNext(){
-if(array.size()>0){
-return array.remove((int)(Math.random()*array.size()));
-}else{
+if(array.size()==0){
 return "NONE";
-  
+}else{
+return array.remove((int)(Math.random()*array.size()));
 }
 
   }
